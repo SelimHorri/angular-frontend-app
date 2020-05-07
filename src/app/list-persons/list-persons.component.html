@@ -1,0 +1,33 @@
+
+<div align='center'>
+	<table class="table table-striped table-hover " >
+	  <thead>
+	    <tr  >
+	      <th *ngFor="let header of headers" >{{header}}</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr *ngFor="let p of listPersons"  >
+				<td>{{p.fname}}</td>
+				<td>{{p.lname}}</td>
+				<td>{{p.email}}</td>
+				<td>{{p.password}}</td>
+				<td><a routerLink='edit?id={{p.id}}' class='btn btn-outline-success'>Edit</a></td>
+				<td><a routerLink='delete?id={{p.id}}' class='btn btn-outline-danger'>Delete</a></td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+	<br><br>
+	<a routerLink='../list-persons' class=''><h2 >Reresh list-persons</h2></a>
+	<br><br>
+
+	<h4>Date : {{now | date | uppercase}}</h4>
+	<br><br>
+</div>
+
+
+
+
+
+
